@@ -1,0 +1,50 @@
+section {
+  @include font(500, 20px, normal, $font-primary);
+  margin-bottom: 30px;
+  input,
+  button,
+  label {
+    vertical-align: middle;
+    box-sizing: border-box;
+  }
+
+  input[type="color"] {
+    height: 41px;
+    background-color: $white;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    color: $brand-primary;
+
+    &:hover {
+      background-color: $brand-secondary;
+      border-color: $brand-primary;
+    }
+  }
+
+  button {
+    padding: 10px;
+    background-color: $white;
+    border: 1px solid $gray;
+    border-radius: 4px;
+    color: $brand-primary;
+
+    &:hover {
+      background-color: $brand-secondary;
+      border-color: $brand-primary;
+    }
+
+    &:focus {
+      outline: none;
+    }
+  }
+
+  &.card {
+    width: 30%;
+    min-width: 300px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 20px;
+    box-shadow: 1px 1px 10px $gray;
+    border-radius: 12px;
+  }
+}

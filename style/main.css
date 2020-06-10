@@ -1,0 +1,90 @@
+@charset "UTF-8";
+/*
+*main sass file
+*/
+/*
+* abstract
+*/
+@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
+/*
+* Mediaquery-pc 指的是在電腦以上包含電腦的斷點、
+* Mediaquery-pad 指的是在平板以上包含平板的斷點、
+* Mediaquery-phone 指的是在手機以上包含手機的斷點
+*/
+/*
+* base
+*/
+/*
+* 本檔案統一瀏覽器部分不同的預設數值，包含文字大小統一、連結樣式統一
+*/
+html {
+  font: 16px sans-serif;
+}
+
+/*
+* 連接樣式統一
+*/
+a {
+  -webkit-text-decoration-line: none;
+          text-decoration-line: none;
+  color: inherit;
+}
+
+/*
+* layout
+*/
+section {
+  font: 500 20px "Amatic SC", cursive;
+  line-height: normal;
+  margin-bottom: 30px;
+}
+
+section input,
+section button,
+section label {
+  vertical-align: middle;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+section input[type="color"] {
+  height: 41px;
+  background-color: #ffffff;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  color: #19caad;
+}
+
+section input[type="color"]:hover {
+  background-color: #dff6f0;
+  border-color: #19caad;
+}
+
+section button {
+  padding: 10px;
+  background-color: #ffffff;
+  border: 1px solid lightgray;
+  border-radius: 4px;
+  color: #19caad;
+}
+
+section button:hover {
+  background-color: #dff6f0;
+  border-color: #19caad;
+}
+
+section button:focus {
+  outline: none;
+}
+
+section.card {
+  width: 30%;
+  min-width: 300px;
+  max-width: 500px;
+  margin: 0 auto;
+  padding: 20px;
+  -webkit-box-shadow: 1px 1px 10px lightgray;
+          box-shadow: 1px 1px 10px lightgray;
+  border-radius: 12px;
+}
+/*# sourceMappingURL=main.css.map */
