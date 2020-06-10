@@ -2,15 +2,19 @@
  * IIFE 防止洩漏
  */
 void function () {
-  const card = $(".card");
-  const addButton = $("button.add");
-  const deleteButton = $("button.delete");
-  const changeButton = $("button.change");
-  const changeBackgroundButton = $("input.changeBackground");
+  const card = $(".card"),
+        addButton = $("button.add"),
+        deleteButton = $("button.delete"),
+        changeButton = $("button.change"),
+        changeBackgroundButton = $("input.changeBackground");
 
   addButton.on("click", addText);
+  deleteButton.on("click", deleteElement);
+  changeButton.on("click", changeTextColorClosure());
+  changeBackgroundButton.on("input", changeBackgroundColor);
+
   /**
-   * @brief 新增卡片段落 <p>
+   * 新增卡片段落 <p>
    */
   function addText() {
     $(".card p").length < 10
@@ -22,37 +26,35 @@ void function () {
       : alert("最多新增到十個段落～");
 }
 
-  deleteButton.on("click", deleteElement);
   /**
-   * @brief 刪除卡片段落 <p>
+   * 刪除卡片段落 <p>
    */
   function deleteElement() {
     $(".card p").length ? $(".card p").last().remove() : alert("已經刪除所有段落！請新增段落");
   }
 
-  changeButton.on("click", changeTextColorClosure());
   /**
-   * @brief 更換卡片文字顏色
+   * 更換卡片文字顏色
    */
   function changeTextColorClosure() {
     // 利用閉包建立私有變數前一個顏色，當重複顏色重新計算一次
     let lastColor;
     return function changeTextColor() {
-      const color = ["red", "pink", "tomato", "lightgreen", "black"];
-      const randomNumber = Math.round((color.length - 1) * Math.random());
-      const randomColor = color[randomNumber];
+      const color = ["red", "pink", "tomato", "lightgreen", "black"],
+            randomNumber = Math.round((color.length - 1) * Math.random()),
+            randomColor = color[randomNumber];
       if (randomColor === lastColor) return colorChange();
       lastColor = randomColor;
       $(".card")[0].style.color = randomColor;
     };
   }
 
-  changeBackgroundButton.on("input", changeBackgroundColor);
   /**
-   * @brief 更換卡片背景顏色
-   * @param {event} jQuery 傳入的事件物件
+   * 更換卡片背景顏色
+   * @param {*} jQuery 傳入的事件物件
    */
   function changeBackgroundColor(e) {
     $(".card")[0].style.backgroundColor = e.currentTarget.value;
   }
+  
 }();
