@@ -5,7 +5,6 @@
 /*
 * abstract
 */
-@import url("https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap");
 /*
 * Mediaquery-pc 指的是在電腦以上包含電腦的斷點、
 * Mediaquery-pad 指的是在平板以上包含平板的斷點、
@@ -34,7 +33,7 @@ a {
 * layout
 */
 section {
-  font: 500 20px "Amatic SC", cursive;
+  font: 500 20px sans-serif cursive;
   line-height: normal;
   margin-bottom: 30px;
 }

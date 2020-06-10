@@ -1,8 +1,7 @@
-@import url('https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap');
-
 // font style
 $font-base: sans-serif;
-$font-primary: 'Amatic SC', cursive;
+$font-primary: sans-serif
+cursive;
 
 @mixin font($style, $size, $lineheight, $fontfamily) {
   font: $style $size $fontfamily;
