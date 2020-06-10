@@ -13,7 +13,7 @@ void function () {
    * @brief 新增卡片段落 <p>
    */
   function addText() {
-    $(".card p").length <= 10
+    $(".card p").length < 10
       ? $(
           `<p>第 ${
             $(".card p").length + 1
