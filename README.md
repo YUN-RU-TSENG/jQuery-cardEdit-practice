@@ -4,6 +4,7 @@ some practice about jQuery base method like $('selector') $('selector').on() etc
 
 ## 簡易的卡片編輯器
 
+![](https://i.imgur.com/yboy68F.png)
 
 * 新增文字段落
 * 刪除文字段落
